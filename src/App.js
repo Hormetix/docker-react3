@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          RAFRAICHISSEMENT AUTOMATIQUE?
+          ESSAI CHANGEMENT GITHUB FEATURE PULL REQUEST
         </p>
         <a
           className="App-link"
