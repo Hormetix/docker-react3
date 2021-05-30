@@ -4,7 +4,7 @@ services:
 
 before_install:
   - docker build -t hormetix/docker-react3 -f Dockerfile.dev .
-
+install: travis_wait mvn install
 script:
   - docker run hormetix/docker-react3 npm run test -- --coverage
 
