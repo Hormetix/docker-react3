@@ -6,7 +6,7 @@ before_install:
   - docker build -t hormetix/docker-react3 -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true hormetix/docker-react3 npm run test
+  - docker run hormetix/docker-react3 npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk
