@@ -1,10 +1,12 @@
 sudo: required
+language: generic
+
 services:
   - docker
 
 before_install:
   - docker build -t hormetix/docker-react3 -f Dockerfile.dev .
-install: travis_wait mvn install
+
 script:
   - docker run hormetix/docker-react3 npm run test -- --coverage
 
@@ -19,3 +21,5 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key:
     secure: "$AWS_SECRET_KEY"
+
+install: travis_wait mvn install
